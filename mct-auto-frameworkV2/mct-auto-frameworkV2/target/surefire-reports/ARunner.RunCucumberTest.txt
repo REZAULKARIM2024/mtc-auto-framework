@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ARunner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.27 s <<< FAILURE! - in ARunner.RunCucumberTest
+User see all my Account Options(My Account Test scearios)  Time elapsed: 17.733 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=137.0.7151.119)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [33df51c7726a44d390623f9c0978d743, clickElement {id=f.72BE7192DB0B3C5F7159E8DD9C4E5612.d.982BB2E150BF53E306F52D76EAD25B86.e.506}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.119, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\rezau\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64657/devtoo..., se:cdpVersion: 137.0.7151.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (33df51c7726a44d390623f9c0978d743)] -> xpath: /html/body/div[1]/div[1]/nav/div[3]/div/div[3]/div/ul/li/div/div[1]/a]
+Session ID: 33df51c7726a44d390623f9c0978d743
+
