@@ -1,0 +1,126 @@
+Started by user Rezaul Karim
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/REZAULKARIM2024/mtc-auto-framework.git # timeout=10
+Fetching upstream changes from https://github.com/REZAULKARIM2024/mtc-auto-framework.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.47.0.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/REZAULKARIM2024/mtc-auto-framework.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 7638f9d3a4ec9d56c13da127048f2ee21bb7ce03 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 7638f9d3a4ec9d56c13da127048f2ee21bb7ce03 # timeout=10
+Commit message: "Add files via upload"
+ > git.exe rev-list --no-walk 7638f9d3a4ec9d56c13da127048f2ee21bb7ce03 # timeout=10
+[mtc-auto-framework] $ cmd.exe /C "mvn -f mct-auto-frameworkV2/mct-auto-frameworkV2/pom.xml clean test && exit %%ERRORLEVEL%%"
+[INFO] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Making this build non-interactive, because the environment variable CI equals "true". Disable this detection by removing that variable or adding --force-interactive.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------< com.transfotech:mct-auto-frameworkV2 >------
+[INFO] Building mct-auto-frameworkV2 1.0
+[INFO]   from pom.xml
+[INFO] ----------------------[ jar ]-----------------------
+[WARNING] Version not locked for default bindings plugins [maven-resources-plugin], you should define versions in pluginManagement section of your pom.xml or parent
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ mct-auto-frameworkV2 ---
+[INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mct-auto-frameworkV2 ---
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\src\main\resources
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\src\main\resources-filtered
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ mct-auto-frameworkV2 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mct-auto-frameworkV2 ---
+[INFO] Copying 9 resources from src\test\resources to target\test-classes
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\src\test\resources-filtered
+[INFO] 
+[INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ mct-auto-frameworkV2 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\target\test-classes
+[INFO] /C:/ProgramData/Jenkins/.jenkins/workspace/mtc-auto-framework/mct-auto-frameworkV2/mct-auto-frameworkV2/src/test/java/browserfactory/Browsers.java: C:\ProgramData\Jenkins\.jenkins\workspace\mtc-auto-framework\mct-auto-frameworkV2\mct-auto-frameworkV2\src\test\java\browserfactory\Browsers.java uses or overrides a deprecated API.
+[INFO] /C:/ProgramData/Jenkins/.jenkins/workspace/mtc-auto-framework/mct-auto-frameworkV2/mct-auto-frameworkV2/src/test/java/browserfactory/Browsers.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:2.22.0:test (default-test) @ mct-auto-frameworkV2 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ARunner.[1mRunCucumberTest[m
+
+@debug_may25
+Scenario: User see all my Account Options                                                        # src/test/resources/3_Myaccount.feature:4
+May 02, 2026 8:49:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 148
+May 02, 2026 8:49:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 148.0.7778.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I Open my computers "chrome" browser                                                     # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php" # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  And I click on login link                                                                      # stepdefinationcode.CommonPageActions.i_click_on_login_link()
+  And I Enter user id as "user"                                                                  # stepdefinationcode.CommonPageActions.i_enter_valid_user_id(java.lang.String)
+  And I Enter password as "pass"                                                                 # stepdefinationcode.CommonPageActions.i_enter_valid_password(java.lang.String)
+  And I Click the login button                                                                   # stepdefinationcode.CommonPageActions.i_click_the_login_button()
+  And I click on myprofile-name link                                                             # stepdefinationcode.CommonPageActions.i_click_on_my_profileName_link()
+  When I click on my-account link                                                                # stepdefinationcode.CommonPageActions.i_click_on_my_account_link()
+  Then I see all my account options available                                                    # stepdefinationcode.AllValidationSteps.i_see_all_my_account_options_available(io.cucumber.datatable.DataTable)
+May 02, 2026 8:49:37 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1478)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1423)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1423)
+
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+[INFO] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.072 s - in ARunner.[1mRunCucumberTest[m
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] [1;32mTests run: 1, Failures: 0, Errors: 0, Skipped: 0[m
+[INFO] 
+[INFO] ----------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ----------------------------------------------------
+[INFO] Total time:  22.001 s
+[INFO] Finished at: 2026-05-02T20:49:38-04:00
+[INFO] ----------------------------------------------------
+[CucumberReport] Using Cucumber Reports version 5.9.0
+[CucumberReport] JSON report directory is "C:\Users\rezau\eclipse-workspace\mct-auto-frameworkV2\mct-auto-frameworkV2\target\cucumber-report"
+[CucumberReport] Copied 0 properties files from workspace "C:\Users\rezau\eclipse-workspace\mct-auto-frameworkV2\mct-auto-frameworkV2\target\cucumber-report" to reports directory "C:\ProgramData\Jenkins\.jenkins\jobs\mtc-auto-framework\builds\26\cucumber-html-reports_39227e3d-ae4d-3ede-a3b5-22ffc6eb6b6b\.cache"
+[CucumberReport] Copied 1 files from workspace "C:\Users\rezau\eclipse-workspace\mct-auto-frameworkV2\mct-auto-frameworkV2\target\cucumber-report" to reports directory "C:\ProgramData\Jenkins\.jenkins\jobs\mtc-auto-framework\builds\26\cucumber-html-reports_39227e3d-ae4d-3ede-a3b5-22ffc6eb6b6b\.cache"
+[CucumberReport] Processing 1 json files:
+[CucumberReport] C:\ProgramData\Jenkins\.jenkins\jobs\mtc-auto-framework\builds\26\cucumber-html-reports_39227e3d-ae4d-3ede-a3b5-22ffc6eb6b6b\.cache\cucumber.json
+Finished: SUCCESS
